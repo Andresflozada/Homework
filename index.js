@@ -1,4 +1,4 @@
-// 1. Concat():
+// 1. concat():
 
 var arr1 = ["a", "b", "c"];
 var arr2 = ["d", "e", "f"];
@@ -6,7 +6,7 @@ var arr3 = arr1.concat(arr2);
 
 console.log(arr3); // Output: ["a", "b", "c", "d", "e", "f"]
 
-// 2. Every():
+// 2. every():
 
 var numbers = [1, 2, 3, 4, 5];
 
@@ -79,11 +79,11 @@ console.log(indexOfResult); // Output: 2
 
 // 9. Join():
 
-var words = ["Hello", "World"];
+var words = ["Hola", "Andres"];
 
 var joinResult = words.join(" ");
 
-console.log(joinResult); // Output: "Hello World"
+console.log(joinResult); // Output: "Hola Andres"
 
 // 10. LastIndexOf():
 
@@ -140,8 +140,8 @@ var reduceRightResult = numbers.reduceRight(function(previousValue, currentValue
 console.log(reduceRightResult); // Output: 15
 
 // 16. reverse(): 
-let array = [1, 2, 3, 4, 5];
-console.log(array.reverse()); // [5, 4, 3, 2, 1]
+let array = [1, 3, 2, 4, 5, 6, 9];
+console.log(array.reverse()); // [9, 6, 5, 4, 2, 3, 1]
 
 // 17. shift(): 
 array = [1, 2, 3, 4, 5];
@@ -179,3 +179,73 @@ console.log(array); // [6, 1, 2, 3, 4, 5]
 // 24. valueOf(): 
 array = [1, 2, 3, 4, 5];
 console.log(array.valueOf()); // [1, 2, 3, 4, 5]
+
+// 25. at():
+array = [1, 2, 3, 4, 5, 6, 7];
+console.log(array.at(6)); // 
+console.log(array); // [1, 2, 3, 4, 5, 6, 7]
+
+// 26. constructor():
+const cars = ['Audi', 'Mazda'];
+console.log(cars.length); // 2
+console.log(cars[1]);     // "Mazda"
+
+// 27. copyWithin():
+const array10 = ['a', 'b', 'c', 'd', 'e'];
+console.log(array10.copyWithin(0, 3, 4));
+console.log(array10.copyWithin(1, 3));
+//output: Array ["d", "b", "c", "d", "e"]
+//output: Array ["d", "d", "e", "d", "e"]
+
+// 28. entries():
+const array3 = ['a', 'b', 'c'];
+const iterator1 = array3.entries();
+console.log(iterator1.next().value);
+//output: Array [0, "a"]
+console.log(iterator1.next().value);
+//output: Array [1, "b"]
+
+// 29. flat(): 
+var arr1 = [1, 2, [3, 4]];
+arr1.flat();
+// [1, 2, 3, 4]
+
+var arr2 = [1, 2, [3, 4, [5, 6]]];
+arr2.flat();
+// [1, 2, 3, 4, [5, 6]]
+
+var arr3 = [1, 2, [3, 4, [5, 6]]];
+arr3.flat(2);
+// [1, 2, 3, 4, 5, 6]
+
+// 30. flatMap(): 
+
+const arr1 = [1, 2, [3], [4, 5], 6, []];
+const flattened = arr1.flatMap(num => num);
+console.log(flattened);
+// Expected output: Array [1, 2, 3, 4, 5, 6]
+
+// 31. forEach():
+
+const array5 = ['a', 'b', 'c','d', 'e', 'f','hey' ];
+array5.forEach(element => console.log(element));
+
+// output: "a"
+// output: "b"
+// output: "c"
+// output: "d"
+// output: "e"
+// output: "f"
+// output: "hey"
+
+// 32. reduceRight():
+
+const array1 = [[0, 1], [2, 3], [4, 5]];
+const result = array1.reduceRight((accumulator, currentValue) => accumulator.concat(currentValue));
+console.log(result);
+//output: Array [4, 5, 2, 3, 0, 1]
+
+
+
+
+
